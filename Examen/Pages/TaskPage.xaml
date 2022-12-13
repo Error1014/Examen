@@ -13,8 +13,12 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height=" *"/>
             <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="ListTask" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1">
+        <DockPanel Background="#4db2d8">
+            
+        </DockPanel>
+        <DataGrid x:Name="ListTask" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Background="#d7e7f5" PreviewMouseLeftButtonDown="SelectTaskLeftClick" MouseDoubleClick="SelectTaskDoubleClick">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="*" Binding="{Binding Title}" Header="Заголовок задачи"/>
                 <DataGridTextColumn Width="*" Binding="{Binding text}" Header="Описание задачи"/>
@@ -27,10 +31,17 @@
                 <DataGridTextColumn Width="*" Binding="{Binding WorkType.Title}" Header="Характер задачи"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DockPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right">
-            <TextBlock Style="{StaticResource TextBlockAutorization}" Width="200" Text="Время до блокироваки: "/>
-            <TextBlock Style="{StaticResource TextBlockAutorization}" Width="50" x:Name="TimeBlokirow" Text="? мин."/>
-            <Button Style="{StaticResource AccentButton}" Content="Выход" Margin="10" Width="auto" Padding="20,0" Click="Exit"/>
+        <DockPanel Grid.Row="2" HorizontalAlignment="Left">
+            <Button Style="{StaticResource AccentButton}" Content="Добавить задачу" Margin="10" Width="auto" Padding="20,0" Click="AddTask"/>
+            <Button Style="{StaticResource AccentButton}" Content="Редактировать задачу" Margin="10" Width="auto" Padding="20,0"  Click="EditTask"/>
         </DockPanel>
+        <DockPanel  Background="#4db2d8" Grid.Row="3">
+            <DockPanel  VerticalAlignment="Center" HorizontalAlignment="Right">
+                <TextBlock Style="{StaticResource TextBlockAutorization}" Width="200" Text="Время до блокироваки: "/>
+                <TextBlock Style="{StaticResource TextBlockAutorization}" Width="50" x:Name="TimeBlokirow" Text="? мин."/>
+                <Button Style="{StaticResource AccentButton}" Content="Выход" Margin="10" Width="auto" Padding="20,0" Click="Exit"/>
+            </DockPanel>
+        </DockPanel>
+        
     </Grid>
 </Page>

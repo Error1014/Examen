@@ -26,3 +26,5 @@ C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\bin\Debug\
 C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\obj\Debug\Examen_Content.g.cs
 C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\obj\Debug\Examen.csproj.CopyComplete
+C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\obj\Debug\Pages\AddEditPage.g.cs
+C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\obj\Debug\Pages\AddEditPage.baml

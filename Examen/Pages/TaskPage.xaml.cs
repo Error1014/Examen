@@ -21,6 +21,8 @@ namespace Examen.Pages
     /// </summary>
     public partial class TaskPage : Page
     {
+        private Task SelectTask=new Task();
+        private User MyUser =new User();
 
         public TaskPage(User SelectUser, int typeUser)
         {
@@ -32,6 +34,7 @@ namespace Examen.Pages
             else
             {
                 //TitleUser.Text = "Исполнитель";
+                MyUser=SelectUser;
                 MainWindow.FIOInfo.Visibility = Visibility.Visible;
                 MainWindow.ShowNameExecutor(SelectUser);
                 var MyTask = TipoEkzEntities.GetContext().Task.Where(x => x.ExecutorID == SelectUser.ID).ToList();
@@ -44,5 +47,27 @@ namespace Examen.Pages
             MainWindow.MainWindowFrame.Content = new Pages.AutorisationPage();
             MainWindow.FIOInfo.Visibility = Visibility.Hidden;
         }
+
+        private void AddTask(object sender, RoutedEventArgs e)
+        {
+            MainWindow.MainWindowFrame.Content = new Pages.AddEditPage(null, MyUser);
+        }
+
+        private void EditTask(object sender, RoutedEventArgs e)
+        {
+            MainWindow.MainWindowFrame.Content = new Pages.AddEditPage(SelectTask, MyUser);
+        }
+
+        private void SelectTaskDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            SelectTask = (e.OriginalSource as FrameworkElement).DataContext as Task;
+            MainWindow.MainWindowFrame.Content = new Pages.AddEditPage(SelectTask, MyUser);
+        }
+
+        private void SelectTaskLeftClick(object sender, MouseButtonEventArgs e)
+        {
+            SelectTask = (e.OriginalSource as FrameworkElement).DataContext as Task;
+        }
+
     }
 }
