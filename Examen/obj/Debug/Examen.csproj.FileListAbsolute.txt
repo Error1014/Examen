@@ -19,3 +19,10 @@ C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\obj\Debug\
 C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\obj\Debug\Examen.csproj.CoreCompileInputs.cache
 C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\obj\Debug\Examen.exe
 C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\obj\Debug\Examen.pdb
+C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\bin\Debug\EntityFramework.dll
+C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\bin\Debug\EntityFramework.xml
+C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\obj\Debug\Examen_Content.g.cs
+C:\Users\lordv\OneDrive\Рабочий стол\Ekzamen\Examen\Examen\obj\Debug\Examen.csproj.CopyComplete

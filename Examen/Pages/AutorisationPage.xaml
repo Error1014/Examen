@@ -24,18 +24,18 @@
             </DockPanel>
             <Button Style="{StaticResource AccentButton}" Content="Вход" Click="Autorization"/>
         </StackPanel>
-        <StackPanel Grid.Row="1">
-            <TextBlock>
-                <Run/>
-                <Run/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left">
+            <TextBlock Style="{StaticResource TextInfoAutorizat}">
+                <Run Text="Текущая дата: "/>
+                <Run x:Name="ToDayDate" Foreground="#f02a53"/>
             </TextBlock>
-            <TextBlock>
-                <Run/>
-                <Run/>
+            <TextBlock Style="{StaticResource TextInfoAutorizat}">
+                <Run Text="До ближайшей ЗП: "/>
+                <Run x:Name="DoZP" Foreground="#f02a53"/>
             </TextBlock>
-            <TextBlock>
-                <Run/>
-                <Run/>
+            <TextBlock Style="{StaticResource TextInfoAutorizat}">
+                <Run Text="Задач выполняется:"/>
+                <Run x:Name="TaskActiv" Foreground="#f02a53"/>
             </TextBlock>
         </StackPanel>
     </Grid>

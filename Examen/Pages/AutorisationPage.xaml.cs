@@ -23,6 +23,21 @@ namespace Examen.Pages
         public AutorisationPage()
         {
             InitializeComponent();
+            DateTime dateTime = DateTime.Today;
+
+            ToDayDate.Text = dateTime.Day.ToString() + "." + dateTime.Month.ToString() + "." + dateTime.Year.ToString();
+            int TaskCount = TipoEkzEntities.GetContext().Task.Where(x => x.StatusID == 2).Count();
+            TaskActiv.Text = TaskCount.ToString();
+            // 5 и 20 числа выдают зп
+            if (dateTime.Day>5&&dateTime.Day<=20)
+            {
+                DoZP.Text=5+"."+dateTime.Month+"."+dateTime.Year.ToString();
+            }
+            else
+            {
+                DoZP.Text = 20 + "." + dateTime.Month + "." + dateTime.Year.ToString();
+            }
+
         }
 
         private void Autorization(object sender, RoutedEventArgs e)
