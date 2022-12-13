@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,16 +21,19 @@ namespace Examen.Pages
     /// </summary>
     public partial class TaskPage : Page
     {
-        public TaskPage(int typeUser)
+
+        public TaskPage(User SelectUser, int typeUser)
         {
             InitializeComponent();
             if (typeUser==1)
             {
-                TitleUser.Text = "Менеджер";
+                //TitleUser.Text = "Менеджер";
             }
             else
             {
-                TitleUser.Text = "Исполнитель";
+                //TitleUser.Text = "Исполнитель";
+                MainWindow.FIOInfo.Visibility = Visibility.Visible;
+                MainWindow.ShowNameExecutor(SelectUser);
             }
         }
     }

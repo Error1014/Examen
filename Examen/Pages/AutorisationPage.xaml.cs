@@ -44,16 +44,17 @@ namespace Examen.Pages
         {
             string Login = LoginBox.Text;
             string Password = PasswordBox.Text;
-            if (Login=="1"&&Password=="1111")
+            User MyUser = new User();
+            var Users = TipoEkzEntities.GetContext().User.Where(x=>x.IsDeleted==false).ToList();
+            foreach (var item in Users)
             {
-                //Менеджер
-                MainWindow.MainWindowFrame.Content = new Pages.TaskPage(1);
+                if (item.Login==Login&&item.Password == Password)
+                {
+                    MyUser = item;
+                    break;
+                }
             }
-            else if (Login == "0" && Password == "0000")
-            {
-                //Исполнитель
-                MainWindow.MainWindowFrame.Content = new Pages.TaskPage(2);
-            }
+            MainWindow.MainWindowFrame.Content = new Pages.TaskPage(MyUser, 2);
         }
     }
 }

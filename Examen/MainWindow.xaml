@@ -14,6 +14,10 @@
         <DockPanel Background="#4db2d8">
             <Image Source="/Resources/logo-full.png" HorizontalAlignment="Left" Margin="5"/>
             <TextBlock Style="{StaticResource TitleText}" Text="Зарплата" VerticalAlignment="Center" Margin="10"/>
+            <TextBlock x:Name="FIOUserBlock" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10" Style="{StaticResource TextBlockAutorization}" Width="300">
+                <Run Text="Имя исполнителя:"/>
+                <Run x:Name="FIOUser"/>
+            </TextBlock>
         </DockPanel>
         <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Grid.Row="1"/>
     </Grid>

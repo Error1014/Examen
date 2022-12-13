@@ -21,12 +21,21 @@ namespace Examen
     public partial class MainWindow : Window
     {
         public static Frame MainWindowFrame;
+        public static TextBlock FIOInfo;
+        public static Run NameExecutor;
         public MainWindow()
         {
             InitializeComponent();
             MainWindowFrame = MainFrame;
             MainWindowFrame.Content = new Pages.AutorisationPage();
+            FIOInfo = FIOUserBlock;
+            NameExecutor = FIOUser;
+            FIOInfo.Visibility = Visibility.Hidden;
+        }
 
+        public static void ShowNameExecutor(User MyUser)
+        {
+            NameExecutor.Text = MyUser.MiddleName + " " + MyUser.FirstName[0] + "." + MyUser.LastName[0] + ".";
         }
     }
 }
