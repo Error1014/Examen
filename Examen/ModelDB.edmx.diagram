@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="69d7e0e2df594c458a14e56221184fa7" Name="Diagram1">
+        <EntityTypeShape EntityType="TipoEkzModel.Executor" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipoEkzModel.Grade" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipoEkzModel.Manager" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipoEkzModel.Status" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipoEkzModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipoEkzModel.Task" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipoEkzModel.User" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipoEkzModel.WorkType" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <AssociationConnector Association="TipoEkzModel.executors_fk0" ManuallyRouted="false" />
+        <AssociationConnector Association="TipoEkzModel.FK_Executor_Grade" ManuallyRouted="false" />
+        <AssociationConnector Association="TipoEkzModel.FK_Executor_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TipoEkzModel.tasks_fk0" ManuallyRouted="false" />
+        <AssociationConnector Association="TipoEkzModel.FK_Manager_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TipoEkzModel.FK_Task_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TipoEkzModel.FK_Task_WorkType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
