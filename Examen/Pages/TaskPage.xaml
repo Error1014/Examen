@@ -9,6 +9,28 @@
       Title="TaskPage">
 
     <Grid Background="#d7e7f5">
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height=" *"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="ListTask" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Binding="{Binding Title}" Header="Заголовок задачи"/>
+                <DataGridTextColumn Width="*" Binding="{Binding text}" Header="Описание задачи"/>
+                <DataGridTextColumn Width="*" Binding="{Binding CreateDateTime}" Header="Срок испонения"/>
+                <DataGridTextColumn Width="*" Binding="{Binding Deadline}" Header="Дата выполнения"/>
+                <DataGridTextColumn Width="*" Binding="{Binding Difficulty}" Header="Сложность задачи"/>
+                <DataGridTextColumn Width="*" Binding="{Binding Time}" Header="Время на выполнение задачи"/>
+                <DataGridTextColumn Width="*" Binding="{Binding Executor.User.MiddleName}" Header="Исполнитель задачи"/>
+                <DataGridTextColumn Width="*" Binding="{Binding Status.Title}" Header="Статус задачи"/>
+                <DataGridTextColumn Width="*" Binding="{Binding WorkType.Title}" Header="Характер задачи"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DockPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+            <TextBlock Style="{StaticResource TextBlockAutorization}" Width="200" Text="Время до блокироваки: "/>
+            <TextBlock Style="{StaticResource TextBlockAutorization}" Width="50" x:Name="TimeBlokirow" Text="? мин."/>
+            <Button Style="{StaticResource AccentButton}" Content="Выход" Margin="10" Width="auto" Padding="20,0" Click="Exit"/>
+        </DockPanel>
     </Grid>
 </Page>

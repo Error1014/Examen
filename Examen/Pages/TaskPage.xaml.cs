@@ -34,7 +34,15 @@ namespace Examen.Pages
                 //TitleUser.Text = "Исполнитель";
                 MainWindow.FIOInfo.Visibility = Visibility.Visible;
                 MainWindow.ShowNameExecutor(SelectUser);
+                var MyTask = TipoEkzEntities.GetContext().Task.Where(x => x.ExecutorID == SelectUser.ID).ToList();
+                ListTask.ItemsSource = MyTask;
             }
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            MainWindow.MainWindowFrame.Content = new Pages.AutorisationPage();
+            MainWindow.FIOInfo.Visibility = Visibility.Hidden;
         }
     }
 }
