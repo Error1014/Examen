@@ -13,20 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Examen
+namespace Examen.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для TaskPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TaskPage : Page
     {
-        public static Frame MainWindowFrame;
-        public MainWindow()
+        public TaskPage(int typeUser)
         {
             InitializeComponent();
-            MainWindowFrame = MainFrame;
-            MainWindowFrame.Content = new Pages.AutorisationPage();
-
+            if (typeUser==1)
+            {
+                TitleUser.Text = "Менеджер";
+            }
+            else
+            {
+                TitleUser.Text = "Исполнитель";
+            }
         }
     }
 }

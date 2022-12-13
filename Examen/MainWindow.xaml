@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:Examen"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#d7e7f5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Background="#4db2d8">
+            <Image Source="/Resources/logo-full.png" HorizontalAlignment="Left" Margin="5"/>
+            <TextBlock Style="{StaticResource TitleText}" Text="Зарплата" VerticalAlignment="Center" Margin="10"/>
+        </DockPanel>
+        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Grid.Row="1"/>
     </Grid>
 </Window>
