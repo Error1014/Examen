@@ -35,7 +35,11 @@ namespace Examen
 
         public static void ShowNameExecutor(User MyUser)
         {
-            NameExecutor.Text = MyUser.MiddleName + " " + MyUser.FirstName[0] + "." + MyUser.LastName[0] + ".";
+            var GradeUser = (from a in TipoEkzEntities.GetContext().Executor.ToList()
+                            join b in TipoEkzEntities.GetContext().Grade.ToList() on a.ID equals b.ID
+                            where b.ID == MyUser.ID
+                            select b).First();
+            NameExecutor.Text = MyUser.MiddleName + " " + MyUser.FirstName[0] + "." + MyUser.LastName[0] + "./"+ GradeUser.Title;
         }
     }
 }

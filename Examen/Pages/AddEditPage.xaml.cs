@@ -27,6 +27,46 @@ namespace Examen.Pages
             InitializeComponent();
             this.MyUser = MyUser;
             this.SelectTask = SelectTask;
+            ShowComboBoxExecutor();
+            ShowComboBoxStatus();
+            ShowComboBoxWorkType();
+
+
+
+
+
+            DataContext = SelectTask;
+        }
+
+        private void ShowComboBoxExecutor()
+        {
+            ExecutorCombo.ItemsSource = TipoEkzEntities.GetContext().User.Select(x => x).Distinct().ToList();
+            ExecutorCombo.SelectedIndex = 0;
+            if (SelectTask != null)
+            {
+                ExecutorCombo.SelectedItem = SelectTask.Executor.User;
+            }
+        }
+        private void ShowComboBoxStatus()
+        {
+            var status = TipoEkzEntities.GetContext().Status.Select(x => x).Distinct().ToList();
+            StatusCombo.ItemsSource = status;
+            StatusCombo.SelectedIndex = 0;
+            if (SelectTask != null)
+            {
+                StatusCombo.SelectedItem = status.Where(x=>x.ID== SelectTask.StatusID);
+            }
+        }
+
+        private void ShowComboBoxWorkType()
+        {
+            var workType = TipoEkzEntities.GetContext().WorkType.Select(x => x).Distinct().ToList();
+            WorkTypeCombo.ItemsSource = workType;
+            WorkTypeCombo.SelectedIndex = 0;
+            if (SelectTask != null)
+            {
+                WorkTypeCombo.SelectedItem = workType.Where(x => x.ID == SelectTask.WorkTypeID);
+            }
         }
 
         private void Save(object sender, RoutedEventArgs e)

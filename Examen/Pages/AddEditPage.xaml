@@ -31,15 +31,15 @@
                     <TextBlock Style="{StaticResource TextEnterDataBlock}" Text="Характер задачи :"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Left" Width="290">
-                    <TextBox Style="{StaticResource TextEnterDataBox}"/>
-                    <TextBox Style="{StaticResource TextEnterDataBox}"/>
-                    <DatePicker Style="{StaticResource TextEnterDataBox}"/>
-                    <DatePicker Style="{StaticResource TextEnterDataBox}"/>
-                    <TextBox Style="{StaticResource TextEnterDataBox}"/>
-                    <TextBox Style="{StaticResource TextEnterDataBox}"/>
-                    <ComboBox Style="{StaticResource TextEnterDataBox}"/>
-                    <ComboBox Style="{StaticResource TextEnterDataBox}"/>
-                    <ComboBox Style="{StaticResource TextEnterDataBox}"/>
+                    <TextBox    Text="{Binding Title}" Style="{StaticResource TextEnterDataBox}"/>
+                    <TextBox    Text="{Binding Description}" Style="{StaticResource TextEnterDataBox}"/>
+                    <DatePicker SelectedDate="{Binding CreateDateTime}" Style="{StaticResource TextEnterDataBox}"/>
+                    <DatePicker SelectedDate="{Binding Deadline}" Style="{StaticResource TextEnterDataBox}"/>
+                    <TextBox    Text="{Binding Difficulty}" Style="{StaticResource TextEnterDataBox}"/>
+                    <TextBox    Text="{Binding Time}" Style="{StaticResource TextEnterDataBox}"/>
+                    <ComboBox x:Name="ExecutorCombo"  DisplayMemberPath="MiddleName"  Style="{StaticResource TextEnterDataBox}"/>
+                    <ComboBox x:Name="StatusCombo"  DisplayMemberPath="Title"  Style="{StaticResource TextEnterDataBox}"/>
+                    <ComboBox x:Name="WorkTypeCombo"  DisplayMemberPath="Title"  Style="{StaticResource TextEnterDataBox}"/>
                 </StackPanel>
             </DockPanel>
         </ScrollViewer>

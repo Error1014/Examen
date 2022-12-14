@@ -16,7 +16,7 @@
         <StackPanel Margin="40">
             <DockPanel HorizontalAlignment="Center">
                 <TextBlock Style="{StaticResource TextBlockAutorization}" Text="Логин:" HorizontalAlignment="Right"/>
-                <TextBox x:Name="LoginBox" Style="{StaticResource TextBoxAutorization}" HorizontalAlignment="Left"/>
+                <TextBox x:Name="LoginBox" Style="{StaticResource TextBoxAutorization}" Text="galiulina" HorizontalAlignment="Left"/>
             </DockPanel>
             <DockPanel HorizontalAlignment="Center">
                 <TextBlock Style="{StaticResource TextBlockAutorization}" Text="Пароль:"/>
